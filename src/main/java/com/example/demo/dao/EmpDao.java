@@ -14,4 +14,17 @@ public class EmpDao {
 	public List<EmpVo> listAll(){
 		return EmpManager.listAll();
 	}
+	
+	
+	//삽입
+	public int insertEmp(EmpVo e) {
+		return EmpManager.insert(e);
+	}
+	
+	
+	//관리자 리스트
+	public List<EmpVo> managerList(){
+		return EmpManager.managerList();
+	}
+	
 }

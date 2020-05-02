@@ -34,4 +34,23 @@ public class EmpManager {
 	}
 	
 	
+	//삽입
+	public static int insert(EmpVo e) {
+		int re = -1;
+		SqlSession session = factory.openSession(true);
+		re = session.insert("emp.insert", e);
+		session.close();
+		return re;
+	}
+	
+	
+	//관리자 리스트
+	public static List<EmpVo> managerList(){
+		SqlSession session = factory.openSession();
+		List<EmpVo> list = session.selectList("emp.managerList");
+		session.close();
+		return list;
+	}
+	
+	
 }

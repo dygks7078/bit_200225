@@ -6,4 +6,13 @@
   <select id="selectAll" resultType="empVo">
     select * from emp
   </select>
+  
+  <insert id="insert">
+  	insert into emp values(seq_emp.nextval, #{ename}, #{job}, #{sal}, #{comm}, #{mgr}, sysdate, #{dno})
+  </insert>
+  
+  <select id="managerList" resultType="empVo">
+  	select * from emp where job != '사원' 
+  </select>
+  
 </mapper>
