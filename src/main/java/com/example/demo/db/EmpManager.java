@@ -8,9 +8,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.example.demo.vo.DeptVo;
+import com.example.demo.vo.EmpVo;
 
-public class DeptManager {
+public class EmpManager {
+
 	private static SqlSessionFactory factory;
 	
 	static {
@@ -20,16 +21,17 @@ public class DeptManager {
 			reader.close();
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
-		}
+		}		
 	}
 	
 	
 	//리스트
-	public static List<DeptVo> listAll(){
+	public static List<EmpVo> listAll(){
 		SqlSession session = factory.openSession();
-		List<DeptVo> list = session.selectList("dept.selectAll");
+		List<EmpVo> list = session.selectList("emp.selectAll");
 		session.close();
 		return list;
-	}	
+	}
+	
 	
 }

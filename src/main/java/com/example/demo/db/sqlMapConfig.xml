@@ -16,6 +16,7 @@
 
 	<typeAliases>
 		<typeAlias type="com.example.demo.vo.DeptVo" alias="deptVo"/>
+		<typeAlias type="com.example.demo.vo.EmpVo" alias="empVo"/>
 	</typeAliases>
 
   <environments default="development">
@@ -31,5 +32,6 @@
   </environments>
   <mappers>
     <mapper resource="com/example/demo/db/DeptMapper.xml"/>
+    <mapper resource="com/example/demo/db/EmpMapper.xml"/>
   </mappers>
 </configuration>
