@@ -9,6 +9,7 @@
 </head>
 <body>
 	<h2>${title }</h2>
+	<h2>commit test</h2>
 	<hr>
 	<a href="listDept.do">부서목록</a>
 	<a href="listEmp.do">사원목록</a>
