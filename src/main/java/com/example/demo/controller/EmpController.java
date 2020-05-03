@@ -52,7 +52,7 @@ public class EmpController {
 		mav.addObject("re", re);
 		return mav;
 	} 
-
+	
 	
 	
 }
